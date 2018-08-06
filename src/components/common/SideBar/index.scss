@@ -1,117 +1,186 @@
 .main-sidebar {
-    background-color: #222d32;
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding-top: 50px;
-    min-height: 100%;
-    width: 230px;
-    z-index: 810;
-    transition: transform .3s ease-in-out,width .3s ease-in-out;
-
-    &__wrapper {
-        height: auto;
-        padding-bottom: 10px;
-
-        &__user-panel {
-            position: relative;
-            width: 100%;
-            padding: 10px;
-            overflow: hidden;
-            white-space: nowrap;
-
-            &:before {
-                content: " ";
-                display: table;
-            }
-
-            .image {
-                float: left;
-
-                img {
-                    width: 100%;
-                    max-width: 45px;
-                    height: auto;
-                    border-radius: 50%;
-                    vertical-align: middle;
-                }
-            }
-
-            .info {
-                float: left;
-                color: #fff;
-                padding: 5px 5px 5px 15px;
-                line-height: 1;
-                position: absolute;
-                left: 55px;
-
-                .status {
-                    color: #fff;
-                    font-size: 11px;
-                    display: flex;
-
-                    svg {
-                        margin-right: 3px;
-                        width: 9px;
-                        height: 11px;
-
-                        &.text-success {
-                            color: #3c763d;
-                        }
-                    }
-                }
-
-                p {
-                    font-size: 14px;
-                    font-family: 'Source Sans Pro',sans-serif;
-                    font-weight: 600;
-                    margin: 0;
-                    margin-bottom: 9px;
-                }
-            }
+  background-color: #222d32;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 50px;
+  min-height: 100%;
+  width: 230px;
+  z-index: 810;
+  transition: transform .3s ease-in-out, width .3s ease-in-out;
+  &__wrapper {
+    height: auto;
+    padding-bottom: 10px;
+    &__user-panel {
+      position: relative;
+      width: 100%;
+      padding: 10px;
+      overflow: hidden;
+      white-space: nowrap;
+      &:before {
+        content: " ";
+        display: table;
+      }
+      .image {
+        float: left;
+        img {
+          width: 100%;
+          max-width: 45px;
+          height: auto;
+          border-radius: 50%;
+          vertical-align: middle;
         }
-
-        &__search-box {
-            border-radius: 3px;
-            padding-left: 10px;
-            padding-right: 10px;
-            margin-top: 10px;
-            flex-wrap: nowrap;
-
-            input {
-                background: #374850;
-                border: 1px solid #374850;
-                width: unset;
-
-                ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-                    color: #666;
-                    font-size: 12px;
-                    opacity: 1; /* Firefox */
-                }
-                
-                :-ms-input-placeholder { /* Internet Explorer 10-11 */
-                    color: #666;
-                    font-size: 12px;
-                }
-                
-                ::-ms-input-placeholder { /* Microsoft Edge */
-                    color: #666;
-                    font-size: 12px;
-                }
+      }
+      .info {
+        float: left;
+        color: #fff;
+        padding: 5px 5px 5px 15px;
+        line-height: 1;
+        position: absolute;
+        left: 55px;
+        .status {
+          color: #fff;
+          font-size: 11px;
+          display: flex;
+          svg {
+            margin-right: 3px;
+            width: 9px;
+            height: 11px;
+            &.text-success {
+              color: #3c763d;
             }
-
-            .input-group-btn {
-                button {
-                    background: #374850;
-                    border-radius: 0;
-
-                    svg {
-                        color: #999;
-                        width: 14px;
-                        height: 14px;
-                    }
-                }
-            }
+          }
         }
+        p {
+          font-size: 14px;
+          font-family: 'Source Sans Pro', sans-serif;
+          font-weight: 600;
+          margin: 0;
+          margin-bottom: 9px;
+        }
+      }
     }
+    &__search-box {
+      border-radius: 3px;
+      padding-left: 10px;
+      padding-right: 10px;
+      margin-top: 10px;
+      flex-wrap: nowrap;
+      input {
+        background: #374850;
+        border: 1px solid #374850;
+        width: unset;
+        ::placeholder {
+          /* Chrome, Firefox, Opera, Safari 10.1+ */
+          color: #666;
+          font-size: 12px;
+          opacity: 1;
+          /* Firefox */
+        }
+        :-ms-input-placeholder {
+          /* Internet Explorer 10-11 */
+          color: #666;
+          font-size: 12px;
+        }
+        ::-ms-input-placeholder {
+          /* Microsoft Edge */
+          color: #666;
+          font-size: 12px;
+        }
+      }
+      .input-group-btn {
+        button {
+          background: #374850;
+          border-radius: 0;
+          svg {
+            color: #999;
+            width: 14px;
+            height: 14px;
+          }
+        }
+      }
+    }
+  }
+  .main-sidebar__wrapper__tree {
+    white-space: nowrap;
+    overflow: hidden;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    .header {
+      color: #4b646f;
+      background: #1a2226;
+      padding: 10px 25px 10px 15px;
+      font-size: 12px;
+      text-overflow: clip;
+      white-space: nowrap;
+    }
+
+    > li {
+      position: relative;
+      margin: 0;
+      padding: 0;
+      
+      > a {
+        color: #b8c7ce;
+        padding: 12px 5px 12px 15px;
+        display: block;
+        position: relative;
+        border-left: 3px solid transparent;
+        font-size: 14px;
+
+        > svg {
+          width: 20px;
+        }
+      }
+
+      &.active {
+        > a {
+          border-left-color: #3c8dbc;
+          color: #fff;
+          background: #1e282c;
+        }
+      }
+    }
+  }
+}
+
+.content-header {
+  background: transparent;
+  position: relative;
+  padding: 15px 15px 0 15px;
+
+  > h1 {
+    margin: 0;
+    font-size: 24px;
+
+    > small {
+      font-size: 15px;
+      display: inline-block;
+      padding-left: 4px;
+      font-weight: 300;
+    }
+  }
+
+  .breadcrumb {
+    float: right;
+    background: transparent;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    padding: 7px 5px;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    border-radius: 2px;
+
+    >li {
+      display: inline-block;
+
+      &.active {
+        color: #777;
+      }
+    }
+  }
 }

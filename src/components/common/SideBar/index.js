@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircle, faSearch } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCircle, faSearch, faTh } from '@fortawesome/free-solid-svg-icons'
+import { Link } from "react-router-dom"
 
 import './index.scss';
 
@@ -30,7 +31,19 @@ class SideBar extends Component {
             </span>
           </div>
           <ul className="main-sidebar__wrapper__tree">
-
+            <li className="header">MAIN NAVIGATION</li>
+            <li>
+              <Link to="/widgets">
+                <FontAwesomeIcon icon={faTh} />
+                <span>Widgets</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="/infoBox">
+                <FontAwesomeIcon icon={faTh} />
+                <span>Info Box</span>
+              </Link>
+            </li>
           </ul>
         </section>
       </aside>
