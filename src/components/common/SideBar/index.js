@@ -38,12 +38,6 @@ class SideBar extends Component {
                 <span>Widgets</span>
               </Link>
             </li>
-            <li>
-              <Link to="/infoBox">
-                <FontAwesomeIcon icon={faTh} />
-                <span>Info Box</span>
-              </Link>
-            </li>
           </ul>
         </section>
       </aside>

@@ -5,7 +5,6 @@ import SideBar from '../components/common/SideBar';
 import DashboardV1 from '../components/dashboard-v1';
 import DashboardV2 from '../components/dashboard-v2';
 import Widgets from '../components/widgets';
-import LayoutInfoBox from '../layout/infoBox';
 import ContentHeader from '../components/common/ContentHeader'
 
 class MyRouter extends Component {
@@ -34,9 +33,6 @@ class MyRouter extends Component {
                         />
                         <Route path="/widgets"
                             render={() => <Widgets displayName="widgets" />}
-                        />
-                        <Route path="/infoBox"
-                            render={() => <LayoutInfoBox displayName="infoBox" />}
                         />
                       </div>
                     </div>
